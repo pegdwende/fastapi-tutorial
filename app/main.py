@@ -4,21 +4,20 @@ import random
 from typing import Optional, List
 
 from fastapi import Depends, FastAPI, Response, status, HTTPException, Depends
-from fastapi.params import Body
+# from fastapi.params import Body
 
 from random import Random, randrange
 
-import psycopg2
-from psycopg2.extras import RealDictCursor
+# import psycopg2
+# from psycopg2.extras import RealDictCursor
 import time
-from . import models, schema, helper
-from .database import engine, SessionLocal
-from sqlalchemy.orm import Session
+
+from .database import SessionLocal
 
 from .routers import post, user, auth, vote
-from pydantic import BaseSettings
+# from pydantic import BaseSettings
 
-from app import database
+# from app import database
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -36,12 +35,12 @@ app.add_middleware(
 )
 
 
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+# def get_db():
+#     db = SessionLocal()
+#     try:
+#         yield db
+#     finally:
+#         db.close()
 
 
 my_posts = [{"title": "Post 1", "content": "Content Post 1", "id": 1},

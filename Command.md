@@ -19,4 +19,4 @@ alembic history  : history of revisions
 
 #heroku
 git push heroku main : push changes to erroku
-
+heroku logs -t : check heroku logs
