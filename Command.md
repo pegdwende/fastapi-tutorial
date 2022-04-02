@@ -15,3 +15,8 @@ alembic revision --autogenerate  -m "add phone number" : autogererate migration 
 alembic current :gives the current version of the migration hash
 alembic revision : create revision
 alembic history  : history of revisions 
+
+
+#heroku
+git push heroku main : push changes to erroku
+
