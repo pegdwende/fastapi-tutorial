@@ -1,7 +1,6 @@
 from email.policy import default
 from enum import unique
 from tokenize import String
-from turtle import title
 from .database import Base
 from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 from sqlalchemy.sql.sqltypes import TIMESTAMP
