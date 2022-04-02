@@ -1,7 +1,6 @@
 
 from pydoc import ModuleScanner
 import random
-from turtle import pos, title
 from typing import Optional, List
 
 from fastapi import Depends, FastAPI, Response, status, HTTPException, Depends
