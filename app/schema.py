@@ -40,6 +40,7 @@ class Post(BaseModel):
 class UserCreate(BaseModel):
     email: EmailStr
     password: str
+    phone_bumber: str
 
 
 class CreatedUser(BaseModel):
