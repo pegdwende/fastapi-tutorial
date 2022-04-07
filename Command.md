@@ -50,5 +50,6 @@ set -o allexport; source /home/fastapi-tutorial/.env; set +o allexport : set all
 alembic upgrade head : Alembic upgrade head
 uvicorn --host 0.0.0.0 app.main:app: specify host for uvicorn
 unicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000 : use gunicorn to specify number of workers for load balancing
-
+systemctl restart fastapi : start services
+systemctl status fastapi : check on services
 
