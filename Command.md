@@ -52,4 +52,17 @@ uvicorn --host 0.0.0.0 app.main:app: specify host for uvicorn
 unicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000 : use gunicorn to specify number of workers for load balancing
 systemctl restart fastapi : start services
 systemctl status fastapi : check on services
+sudo apt install nginx -y: installing nginx to handle https request and request forwarding to the our api server 
+cd /etc/nginx/sites-available : got to that directory, edit the default file, on the location and add the configue on the nginx file
+systemctl restart nginx
+go to namecheap create domain, 
+after set up look at video to configure website to domain
+go to this site to enable ssl: https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
+sudo ufw allow http: configure firewall to allow http
+sudo ufw allow https: configure firewall to all https
+sudo ufw allow ssh: configure firewall to allow ssh
+sudo ufw allow 5432: configure to allow postgres traffic | not recomended
+sudo ufw delete allow http: delete a rule
+
+
 
