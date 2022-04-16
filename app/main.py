@@ -19,9 +19,10 @@ from .routers import post, user, auth, vote
 
 # from app import database
 from fastapi.middleware.cors import CORSMiddleware
+from . import models
+from .database import engine
 
-
-# models.Base.metadata.create_all(bind=engine)
+models.Base.metadata.create_all(bind=engine)
 origins = ["https://www.google.com"]
 origins = ["*"]
 
@@ -68,4 +69,4 @@ app.include_router(vote.router)
 @app.get("/")
 async def root():
 
-    return {"message": "Hello World"}
+    return {"message": "Hello World!!!!"}

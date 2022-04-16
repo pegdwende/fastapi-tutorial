@@ -63,6 +63,19 @@ sudo ufw allow https: configure firewall to all https
 sudo ufw allow ssh: configure firewall to allow ssh
 sudo ufw allow 5432: configure to allow postgres traffic | not recomended
 sudo ufw delete allow http: delete a rule
+pushing changes. commit push to remote and pull on live server
+
+
+#Docker
+install docker on machin
+got to docker hup and find python image version
+create Dockerfile
+docker build -t fastapi to create docker image
+create docker-compose.yml file 
+docker-compose up -d
+create a repo on docker up
+docker-compose -f docker-compose-dev.yml up -d
+
 
 
 
